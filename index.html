@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FútbolVintage | Tienda de Camisetas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="logo">FútbolVintage</div>
+        <ul class="nav-links">
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#promos">Promociones</a></li>
+          <li><a href="#admin">Panel rápido</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button class="nav-cta">WhatsApp</button>
+      </nav>
+      <div class="hero-content">
+        <div>
+          <p class="hero-tag">Todo tipo de camisetas de futbol</p>
+          <h1>Vende camisetas de fútbol con una tienda lista para crecer.</h1>
+          <p>
+            Administra tu inventario en segundos, destaca tus lanzamientos y recibe pedidos sin
+            complicaciones.
+          </p>
+          <div class="hero-actions">
+            <button class="primary">Ver colección</button>
+            <button class="ghost">Subir artículo</button>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <strong>120+</strong>
+              <span>Equipos disponibles</span>
+            </div>
+            <div>
+              <strong>24h</strong>
+              <span>Envíos en ciudades principales</span>
+            </div>
+            <div>
+              <strong>4.9</strong>
+              <span>Valoración promedio</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Panel Express</h3>
+          <p>Sube nuevas camisetas y gestiona tu stock con un formulario simple.</p>
+          <ul>
+            <li>Plantillas listas para publicar</li>
+            <li>Precio, talla y stock en un paso</li>
+            <li>Etiquetas para campañas</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="catalogo" class="section">
+        <div class="section-header">
+          <div>
+            <p class="section-tag">Catálogo destacado</p>
+            <h2>Colección lista para vender hoy</h2>
+          </div>
+          <div class="filters">
+            <button class="filter active" data-filter="todas">Todas</button>
+            <button class="filter" data-filter="nueva">Nueva temporada</button>
+            <button class="filter" data-filter="retro">Retro</button>
+            <button class="filter" data-filter="promocion">Promoción</button>
+          </div>
+        </div>
+        <div class="product-grid" id="product-grid"></div>
+      </section>
+
+      <section id="promos" class="section alt">
+        <div class="promo">
+          <div>
+            <p class="section-tag">Promociones inteligentes</p>
+            <h2>Automatiza combos y descuentos para aumentar tu ticket medio.</h2>
+            <p>
+              Configura campañas por temporada, jugador o país. Todo queda guardado y listo para
+              reactivar.
+            </p>
+            <ul class="checklist">
+              <li>Cupones automáticos</li>
+              <li>Inventario sincronizado</li>
+              <li>Alertas de reposición</li>
+            </ul>
+          </div>
+          <div class="promo-card">
+            <h3>Pack clásico</h3>
+            <p>3 camisetas retro con 15% de descuento.</p>
+            <div class="promo-meta">
+              <span>Desde</span>
+              <strong>$89</strong>
+            </div>
+            <button class="primary">Activar promoción</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="admin" class="section">
+        <div class="section-header">
+          <div>
+            <p class="section-tag">Panel rápido</p>
+            <h2>Sube artículos en segundos</h2>
+          </div>
+          <p class="section-copy">
+            Completa el formulario y los artículos se guardan en el navegador para que puedas
+            actualizar tu catálogo sin depender de un desarrollador.
+          </p>
+        </div>
+        <form id="product-form" class="product-form">
+          <div class="form-row">
+            <label>
+              Nombre
+              <input type="text" name="name" placeholder="Camiseta Argentina 2024" required />
+            </label>
+            <label>
+              Club/Selección
+              <input type="text" name="team" placeholder="Argentina" required />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Precio
+              <input type="number" name="price" placeholder="59" min="1" required />
+            </label>
+            <label>
+              Categoría
+              <select name="tag" required>
+                <option value="nueva">Nueva temporada</option>
+                <option value="retro">Retro</option>
+                <option value="promocion">Promoción</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Tallas disponibles
+              <input type="text" name="sizes" placeholder="S, M, L, XL" required />
+            </label>
+            <label>
+              Stock
+              <input type="number" name="stock" placeholder="12" min="0" required />
+            </label>
+          </div>
+          <label>
+            URL de imagen
+            <input type="url" name="image" placeholder="https://..." required />
+          </label>
+          <label>
+            Descripción
+            <textarea name="description" rows="3" placeholder="Edición limitada, tela dry-fit..."></textarea>
+          </label>
+          <button type="submit" class="primary">Agregar al catálogo</button>
+          <p class="form-hint">*Los datos se guardan en tu navegador (localStorage).</p>
+        </form>
+      </section>
+
+      <section id="contacto" class="section alt">
+        <div class="contact">
+          <div>
+            <p class="section-tag">Contacto</p>
+            <h2>¿Listo para vender más?</h2>
+            <p>Atendemos en WhatsApp, Instagram y correo. Respuesta en menos de 10 minutos.</p>
+          </div>
+          <div class="contact-card">
+            <p><strong>WhatsApp:</strong> +34 600 123 456</p>
+            <p><strong>Instagram:</strong> @futboltotal.shop</p>
+            <p><strong>Email:</strong> hola@futboltotal.com</p>
+            <button class="primary">Iniciar chat</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2024 Fútbol Total. Todas las marcas pertenecen a sus respectivos dueños.</p>
+      <div class="footer-links">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#admin">Panel rápido</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
