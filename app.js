@@ -11,54 +11,6 @@ const defaultProducts = [
       "https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1200&q=80",
     description: "Versión player con tejido transpirable y escudo bordado.",
   },
-  {
-    id: 2,
-    name: "Camiseta Argentina 1986",
-    team: "Selección Argentina",
-    price: 69,
-    tag: "retro",
-    sizes: "S, M, L",
-    stock: 7,
-    image:
-      "https://images.unsplash.com/photo-1508804185872-c57fba7a3f14?auto=format&fit=crop&w=1200&q=80",
-    description: "Edición retro con detalles premium y cuello clásico.",
-  },
-  {
-    id: 3,
-    name: "Camiseta PSG Tercera 2024",
-    team: "Paris Saint-Germain",
-    price: 74,
-    tag: "nueva",
-    sizes: "M, L, XL",
-    stock: 12,
-    image:
-      "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=1200&q=80",
-    description: "Diseño moderno con detalles en dorado.",
-  },
-  {
-    id: 4,
-    name: "Camiseta Brasil 2002",
-    team: "Selección Brasil",
-    price: 64,
-    tag: "retro",
-    sizes: "S, M, L, XL",
-    stock: 9,
-    image:
-      "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80",
-    description: "Homenaje a la quinta estrella. Tejido suave y ligero.",
-  },
-  {
-    id: 5,
-    name: "Camiseta AC Milan 2023",
-    team: "AC Milan",
-    price: 59,
-    tag: "promocion",
-    sizes: "M, L",
-    stock: 5,
-    image:
-      "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1200&q=80",
-    description: "Promoción por fin de temporada. Stock limitado.",
-  },
 ];
 
 const productGrid = document.getElementById("product-grid");
